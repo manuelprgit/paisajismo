@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisajismo Estrella del Norte - Diseño y Paisajismos de Jardines</title>
+    <meta name="description" content="Empresa especializada en diseño y paisajismo de jardines. Transformamos espacios con la naturaleza.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Paisajismo Estrella del Norte</h1>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Transformamos espacios con la naturaleza</h2>
+            <p>Diseño y paisajismo profesional para crear jardines hermosos y funcionales</p>
+            <a href="#contacto" class="btn btn-primary">Solicitar Cotización</a>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="section nosotros">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre Nosotros</h2>
+                <p>Expertos en crear espacios verdes que inspiran</p>
+            </div>
+            <div class="nosotros-content">
+                <div class="nosotros-text">
+                    <p>En <strong>Paisajismo Estrella del Norte</strong> nos dedicamos a transformar espacios exteriores en ambientes hermosos y funcionales que conectan con la naturaleza.</p>
+                    <p>Con más de 10 años de experiencia, nuestro equipo de profesionales está comprometido con la excelencia y la sostenibilidad en cada proyecto que realizamos.</p>
+                    <p>Nos especializamos en el diseño y construcción de jardines residenciales y comerciales, adaptándonos a las necesidades específicas de cada cliente.</p>
+                    <a href="#contacto" class="btn btn-secondary">Contáctanos</a>
+                </div>
+                <div class="nosotros-image">
+                    <img src="img/proyectos/1.png" alt="Nuestro equipo trabajando en un proyecto de paisajismo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="section servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Soluciones completas para tus espacios verdes</p>
+            </div>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Diseño de Jardines</h3>
+                    <p>Creamos diseños personalizados que reflejan tu estilo y necesidades específicas.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Paisajismo</h3>
+                    <p>Transformamos espacios exteriores con elementos naturales y arquitectónicos.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Sistemas de Riego</h3>
+                    <p>Instalamos sistemas eficientes para mantener tus plantas saludables.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Mantenimiento</h3>
+                    <p>Cuidamos de tus espacios verdes para que luzcan perfectos todo el año.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Jardinería</h3>
+                    <p>Seleccionamos e instalamos las plantas ideales para tu espacio y clima.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Iluminación Exterior</h3>
+                    <p>Creamos ambientes mágicos con sistemas de iluminación para jardines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos" class="section proyectos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Proyectos</h2>
+                <p>Transformaciones que hablan por sí mismas</p>
+            </div>
+            <div class="proyectos-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="residencial">Residencial</button>
+                <button class="filter-btn" data-filter="comercial">Comercial</button>
+            </div>
+            <div class="proyectos-grid">
+                <div class="proyecto-card" data-category="residencial">
+                    <div class="proyecto-img">
+                        <img src="img/proyectos/1.png" alt="Proyecto de paisajismo residencial">
+                        <div class="proyecto-overlay">
+                            <h3>Jardín Residencial Moderno</h3>
+                            <p>Santo Domingo Norte</p>
+                            <a href="#" class="proyecto-link"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-card" data-category="comercial">
+                    <div class="proyecto-img">
+                        <img src="img/proyectos/2.png" alt="Proyecto de paisajismo comercial">
+                        <div class="proyecto-overlay">
+                            <h3>Área Verde Corporativa</h3>
+                            <p>Santo Domingo</p>
+                            <a href="#" class="proyecto-link"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-card" data-category="residencial">
+                    <div class="proyecto-img">
+                        <img src="img/proyectos/3.png" alt="Proyecto de paisajismo residencial">
+                        <div class="proyecto-overlay">
+                            <h3>Jardín Tropical</h3>
+                            <p>La Romana</p>
+                            <a href="#" class="proyecto-link"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-card" data-category="comercial">
+                    <div class="proyecto-img">
+                        <img src="img/proyectos/4.png" alt="Proyecto de paisajismo comercial">
+                        <div class="proyecto-overlay">
+                            <h3>Plaza Comercial</h3>
+                            <p>Santiago</p>
+                            <a href="#" class="proyecto-link"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-card" data-category="residencial">
+                    <div class="proyecto-img">
+                        <img src="img/proyectos/5.png" alt="Proyecto de paisajismo residencial">
+                        <div class="proyecto-overlay">
+                            <h3>Terraza Verde</h3>
+                            <p>Punta Cana</p>
+                            <a href="#" class="proyecto-link"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-card" data-category="comercial">
+                    <div class="proyecto-img">
+                        <img src="img/proyectos/6.png" alt="Proyecto de paisajismo comercial">
+                        <div class="proyecto-overlay">
+                            <h3>Hotel Boutique</h3>
+                            <p>Samaná</p>
+                            <a href="#" class="proyecto-link"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section class="section testimonios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testimonios</h2>
+                <p>Lo que dicen nuestros clientes</p>
+            </div>
+            <div class="testimonios-slider">
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <p>"Transformaron nuestro jardín en un espacio increíble. El equipo fue profesional y el resultado superó nuestras expectativas."</p>
+                        <div class="cliente-info">
+                            <h4>María Rodríguez</h4>
+                            <p>Cliente Residencial</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <p>"Contratamos a Paisajismo Estrella del Norte para nuestra área corporativa y el resultado fue espectacular. Recomendados al 100%."</p>
+                        <div class="cliente-info">
+                            <h4>Carlos Méndez</h4>
+                            <p>Gerente Empresarial</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <div class="testimonio-content">
+                        <p>"Excelente servicio y atención personalizada. Nuestro jardín es ahora el orgullo del vecindario."</p>
+                        <div class="cliente-info">
+                            <h4>Ana Gómez</h4>
+                            <p>Cliente Residencial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonios-dots"></div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="section contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <p>Estamos listos para transformar tu espacio</p>
+            </div>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Entrada mata san juan, Santo Domingo Norte 11301</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>829-647-2083</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@paisajismoestrella.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horario</h3>
+                            <p>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
+                            <p>Sábados: 8:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contacto-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="servicio" name="servicio" required>
+                                <option value="" disabled selected>Seleccionar servicio</option>
+                                <option value="diseno">Diseño de Jardines</option>
+                                <option value="paisajismo">Paisajismo</option>
+                                <option value="riego">Sistemas de Riego</option>
+                                <option value="mantenimiento">Mantenimiento</option>
+                                <option value="jardineria">Jardinería</option>
+                                <option value="iluminacion">Iluminación Exterior</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Paisajismo Estrella del Norte</h2>
+                    <p>Diseño y Paisajismos de todas la jardinería.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li>Diseño de Jardines</li>
+                        <li>Paisajismo</li>
+                        <li>Sistemas de Riego</li>
+                        <li>Mantenimiento</li>
+                        <li>Jardinería</li>
+                        <li>Iluminación Exterior</li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Boletín Informativo</h3>
+                    <p>Suscríbete para recibir noticias y ofertas especiales.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Paisajismo Estrella del Norte. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/18296472083" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
