@@ -108,13 +108,13 @@
                     <h3>Jardinería</h3>
                     <p>Seleccionamos e instalamos las plantas ideales para tu espacio y clima.</p>
                 </div>
-                <div class="servicio-card">
+                <!-- <div class="servicio-card">
                     <div class="servicio-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3>Iluminación Exterior</h3>
                     <p>Creamos ambientes mágicos con sistemas de iluminación para jardines.</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -192,6 +192,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="proyectos.html" class="btn btn-primary">Ver Todos los Proyectos</a>
             </div>
         </div>
     </section>
@@ -294,18 +297,18 @@
                         <div class="form-group">
                             <select id="servicio" name="servicio" required>
                                 <option value="" disabled selected>Seleccionar servicio</option>
-                                <option value="diseno">Diseño de Jardines</option>
-                                <option value="paisajismo">Paisajismo</option>
-                                <option value="riego">Sistemas de Riego</option>
-                                <option value="mantenimiento">Mantenimiento</option>
-                                <option value="jardineria">Jardinería</option>
-                                <option value="iluminacion">Iluminación Exterior</option>
+                                <option value="Diseño de Jardines">Diseño de Jardines</option>
+                                <option value="Paisajismo">Paisajismo</option>
+                                <option value="Sistemas de Riego">Sistemas de Riego</option>
+                                <option value="Mantenimiento">Mantenimiento</option>
+                                <option value="Jardinería">Jardinería</option>
+                                <!-- <option value="iluminacion">Iluminación Exterior</option> -->
                             </select>
                         </div>
                         <div class="form-group">
                             <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        <button type="button" id="enviar-whatsapp" class="btn btn-primary">Enviar por WhatsApp</button>
                     </form>
                 </div>
             </div>
@@ -338,17 +341,10 @@
                         <li>Sistemas de Riego</li>
                         <li>Mantenimiento</li>
                         <li>Jardinería</li>
-                        <li>Iluminación Exterior</li>
+                        <!-- <li>Iluminación Exterior</li> -->
                     </ul>
                 </div>
-                <div class="footer-newsletter">
-                    <h3>Boletín Informativo</h3>
-                    <p>Suscríbete para recibir noticias y ofertas especiales.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Tu correo electrónico" required>
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
+
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Paisajismo Estrella del Norte. Todos los derechos reservados.</p>

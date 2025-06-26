@@ -128,29 +128,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Formulario de contacto
+    // Formulario de contacto para WhatsApp
     const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+    const enviarWhatsappBtn = document.getElementById('enviar-whatsapp');
+    
+    if (enviarWhatsappBtn) {
+        enviarWhatsappBtn.addEventListener('click', function() {
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const servicio = document.getElementById('servicio').value;
+            const mensaje = document.getElementById('mensaje').value.trim();
             
-            // Aquí se puede agregar la lógica para enviar el formulario por AJAX
-            // Por ahora solo mostramos un mensaje de éxito
-            
-            const formData = new FormData(this);
-            let formValues = {};
-            
-            for (let [key, value] of formData.entries()) {
-                formValues[key] = value;
+            // Validar que todos los campos estén completos
+            if (!nombre || !email || !telefono || !servicio || !mensaje) {
+                alert('Por favor completa todos los campos del formulario');
+                return;
             }
             
-            console.log('Formulario enviado:', formValues);
+            // Crear el mensaje para WhatsApp
+            const textoWhatsapp = `Hola, soy ${nombre}. Estoy interesado/a en el servicio de ${servicio}.%0A%0A*Detalles de contacto:*%0AEmail: ${email}%0ATeléfono: ${telefono}%0A%0A*Mensaje:*%0A${mensaje}`;
             
-            // Mostrar mensaje de éxito
-            alert('¡Gracias por contactarnos! Te responderemos a la brevedad.');
+            // Número de WhatsApp (incluir código de país)
+            const numeroWhatsapp = '18296472083';
             
-            // Resetear el formulario
-            this.reset();
+            // Crear la URL de WhatsApp
+            const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${textoWhatsapp}`;
+            
+            // Abrir WhatsApp en una nueva pestaña
+            window.open(urlWhatsapp, '_blank');
+            
+            // Opcional: resetear el formulario después de enviar
+            contactForm.reset();
         });
     }
     
@@ -230,3 +240,61 @@ document.head.insertAdjacentHTML('beforeend', `
 document.querySelectorAll('.servicio-card, .proyecto-card, .testimonio, .info-item').forEach((el, index) => {
     el.style.setProperty('--item-index', index % 3);
 });
+
+// Funcionalidad del modal de proyectos
+const modal = document.getElementById('proyecto-modal');
+const modalImage = document.getElementById('modal-image');
+const modalTitle = document.getElementById('modal-title');
+const modalLocation = document.getElementById('modal-location');
+const modalDescription = document.getElementById('modal-description');
+const modalDetails = document.getElementById('modal-details');
+const closeModal = document.querySelector('.close-modal');
+
+// Abrir modal al hacer clic en una tarjeta de proyecto
+document.querySelectorAll('.proyecto-card[data-modal="true"]').forEach(card => {
+    card.addEventListener('click', function() {
+        // Obtener datos del proyecto
+        const imgSrc = this.querySelector('img').src;
+        const title = this.querySelector('h3').textContent;
+        const location = this.querySelector('.proyecto-location').innerHTML;
+        const description = this.querySelector('.proyecto-description').textContent;
+        const details = this.querySelector('.proyecto-details').innerHTML;
+        
+        // Llenar el modal con los datos
+        modalImage.src = imgSrc;
+        modalTitle.textContent = title;
+        modalLocation.innerHTML = location;
+        modalDescription.textContent = description;
+        modalDetails.innerHTML = details;
+        
+        // Mostrar el modal
+        modal.style.display = 'block';
+        setTimeout(() => {
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Evitar scroll en el fondo
+        }, 10);
+    });
+});
+
+// Cerrar modal
+if (closeModal) {
+    closeModal.addEventListener('click', function() {
+        cerrarModal();
+    });
+}
+
+// Cerrar modal al hacer clic fuera del contenido
+window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        cerrarModal();
+    }
+});
+
+// Función para cerrar el modal
+function cerrarModal() {
+    modal.classList.remove('show');
+    document.body.style.overflow = ''; // Restaurar scroll inmediatamente
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 300);
+}
