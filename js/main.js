@@ -1,3 +1,35 @@
+// Función para ocultar el loader cuando la página esté completamente cargada
+function hideLoader() {
+    const loader = document.getElementById('loader-wrapper');
+    if (loader) {
+        loader.classList.add('loader-hidden');
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }
+}
+
+// Esperar a que todas las imágenes y recursos estén cargados
+window.addEventListener('load', function() {
+    window.loaderResourcesLoaded = true;
+    // Solo ocultar el loader si ya pasaron los 2 segundos mínimos
+    if (window.loaderMinTimeElapsed) {
+        hideLoader();
+    }
+});
+
+// Establecer un tiempo mánimo para mostrar el loader (2 segundos)
+setTimeout(() => {
+    // Esperar 2 segundos antes de permitir que se oculte el loader
+    window.loaderMinTimeElapsed = true;
+    if (window.loaderResourcesLoaded) {
+        hideLoader();
+    }
+}, 2000);
+
+// Establecer un tiempo máximo para mostrar el loader (7 segundos)
+setTimeout(hideLoader, 7000);
+
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
     // Variables
@@ -120,9 +152,40 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+                // Actualizar la clase active en el menú de navegación
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Scroll suave hacia la sección
                 window.scrollTo({
                     top: targetElement.offsetTop - 70,
                     behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Detectar la sección actual al hacer scroll
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        
+        // Obtener todas las secciones
+        const sections = document.querySelectorAll('section[id]');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                // Actualizar la clase active en el menú de navegación
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + sectionId) {
+                        link.classList.add('active');
+                    }
                 });
             }
         });
